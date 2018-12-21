@@ -1,0 +1,22 @@
+<h2> Know of a pet needing a home?</h2>
+<form (submit) = "create()"> 
+  Name: <br>
+  <input type = "text" name = "pet.name" [(ngModel)] = "pet.name" placeholder = "name">
+  <p *ngIf="errors.name"> {{errors.name.message}} </p>
+  <br> Type: <br>
+  <input type = "text" name = "pet.type" [(ngModel)] = "pet.type" placeholder = "type">
+  <p *ngIf="errors.type"> {{errors.type.message}} </p>
+  <br> Description: <br>
+  <input type = "text" name = "pet.desc" [(ngModel)] = "pet.desc" placeholder = "Description">
+  <p *ngIf="errors.desc"> {{errors.desc.message}} </p>
+  <br>
+  <h3>Skills:</h3> 
+  Skill 1: <input type = "text" name = "pet.skill1" [(ngModel)] = "pet.skill1" placeholder = "Skill 1">
+  <br>
+  Skill 2: <input type = "text" name = "pet.skill2" [(ngModel)] = "pet.skill2" placeholder = "Skill 2">
+  <br>
+  Skill 3: <input type = "text" name = "pet.skill3" [(ngModel)] = "pet.skill3" placeholder = "Skill 3">
+  <br>
+  <input type = "submit" value= "Add Pet">
+  <a [routerLink]= "['/']">Cancel</a>
+</form>
